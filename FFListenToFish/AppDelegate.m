@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "FFTabbarController.h"
+#import <AVOSCloud/AVOSCloud.h>
 
 @interface AppDelegate ()
 
@@ -17,9 +18,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
     [self initUserInterface];
-    
+    [self initDataSource];
+    [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    NSLog(@"launchOptions === %@",launchOptions);
     return YES;
 }
 
@@ -38,6 +40,9 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+
+
+    NSLog(@"????");
 }
 
 
@@ -58,16 +63,24 @@
 
 
 - (void)initDataSource {
-    
+    [AVOSCloud setApplicationId:@"2qewcoP52UQbMqQFd5VmL03i-gzGzoHsz" clientKey:@"394WCmr17Dbmjd8xinOkM4VF"];
+#ifdef DEBUG
+    [AVOSCloud setAllLogsEnabled:YES];
+    NSLog(@"leancloud - 调试");
+#endif
 }
 
 
 
 - (void)creatWindow {
+
     self.window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, kScreen_width, kScreen_height)];
-    ViewController *vc = [ViewController new];
-    self.window.rootViewController = vc;
+    FFTabbarController *tab = [[FFTabbarController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:tab];
+    nav.navigationBar.hidden = YES;
+    self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
+
 }
 
 
