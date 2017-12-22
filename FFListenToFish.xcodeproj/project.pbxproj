@@ -217,7 +217,7 @@
 			children = (
 				5EFB859A1FE76C4F003C825B /* FFBasePch.pch */,
 				5EFB859C1FE76CB7003C825B /* FFBaseHeader.h */,
-				B5A904281FE7965B0019C22E /* ThirdLibray */,
+				B5A904281FE7965B0019C22E /* ThirdLibrary */,
 				5EFB85901FE76A65003C825B /* main.m */,
 				5EFB858C1FE76A65003C825B /* LaunchScreen.storyboard */,
 			);
@@ -543,7 +543,7 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		B5A904281FE7965B0019C22E /* ThirdLibray */ = {
+		B5A904281FE7965B0019C22E /* ThirdLibrary */ = {
 			isa = PBXGroup;
 			children = (
 				B519A2371FECE34B00677A7B /* SYKeychain.h */,
@@ -553,7 +553,7 @@
 				B519A2671FECE34B00677A7B /* SDWebImage */,
 				B5A904291FE7965B0019C22E /* LeanCloud */,
 			);
-			path = ThirdLibray;
+			path = ThirdLibrary;
 			sourceTree = "<group>";
 		};
 		B5A904291FE7965B0019C22E /* LeanCloud */ = {
