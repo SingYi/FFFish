@@ -10,4 +10,14 @@
 
 @interface FFBaseViewController : UIViewController
 
+@property (nonatomic, strong) UITableView *tableView;
+
+
+/** initialize user inter face */
+- (void)initUserInterface;
+
+/** initialize data source  */
+- (void)initDataSource;
+
+
 @end

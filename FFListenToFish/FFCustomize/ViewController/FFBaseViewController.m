@@ -7,6 +7,7 @@
 //
 
 #import "FFBaseViewController.h"
+#import "MJRefresh.h"
 
 @interface FFBaseViewController ()
 
@@ -16,7 +17,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self initUserInterface];
+    [self initDataSource];
+}
+
+
+- (void)initUserInterface {
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.tableView];
+}
+
+- (void)initDataSource {
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +36,24 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - getter
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreen_width, kScreen_height) style:(UITableViewStylePlain)];
+
+        _tableView.backgroundColor = [UIColor redColor];
+    }
+    return _tableView;
 }
-*/
+
+
+
+
+
 
 @end
+
+
+
+

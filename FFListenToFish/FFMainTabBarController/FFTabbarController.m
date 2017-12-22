@@ -25,14 +25,20 @@
 
 - (void)initializeUserInterface {
 //    FFCustomizeTabBar *tabbar = [[FFCustomizeTabBar alloc] init];
+    UITabBar *tabbar = [[UITabBar alloc] initWithFrame:CGRectMake(0, 200, 200, 200)];
 //    tabbar.customizeDelegate = self;
-//    [self setValue:tabbar forKey:@"tabBar"];
+    tabbar.backgroundColor = [UIColor clearColor];
+    tabbar.hidden = YES;
+
+    [self setValue:tabbar forKey:@"tabBar"];
+
+//    [self.tabBar setValue:[UIColor clearColor] forKey:@"backgroundColor"];
 }
 
 - (void)initializeDataSource {
 //    NSArray *viewControllerNames = @[@"FFHomeViewController", @"FFRankListViewController", @"FFOpenServerViewController", @"FFNewMineViewController"];
-    NSArray *viewControllerNames = @[@"FFHomeViewController"];
-    NSArray *titles = @[@"主页", @"排行榜", @"开服表", @"我的"];
+    NSArray *viewControllerNames = @[@"FFHomeViewController",@"FFMineViewController"];
+    NSArray *titles = @[@"主页", @"我", @"开服表", @"我的"];
     NSArray *images = @[@"d_youxi_an", @"b_paihangbang_an-", @"a_libao_an", @"c_wode_an"];
     NSArray *selectImages = @[@"d_youxi_liang", @"b_paihangbang_liang", @"a_libao_liang", @"c_wode_liang"];
     NSMutableArray *viewControllers = [NSMutableArray arrayWithCapacity:4];
@@ -68,13 +74,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreen_width, 300)];
+    view.backgroundColor = [UIColor greenColor];
+    [self.view sendSubviewToBack:view];
+    [self.view addSubview:view];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-\
+
 
 
 @end

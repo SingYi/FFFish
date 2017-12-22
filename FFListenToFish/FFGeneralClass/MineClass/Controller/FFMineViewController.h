@@ -6,8 +6,8 @@
 //  Copyright © 2017年 SingYi. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "FFBaseViewController.h"
 
-@interface FFMineViewController : UIViewController
+@interface FFMineViewController : FFBaseViewController
 
 @end
