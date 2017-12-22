@@ -821,7 +821,6 @@
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/FFListenToFish/Other/ThirdLibray/LeanCloud",
 					"$(PROJECT_DIR)/FFListenToFish/Other/ThirdLibrary/LeanCloud",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/FFListenToFish/Other/FFBasePch.pch";
@@ -843,7 +842,6 @@
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/FFListenToFish/Other/ThirdLibray/LeanCloud",
 					"$(PROJECT_DIR)/FFListenToFish/Other/ThirdLibrary/LeanCloud",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/FFListenToFish/Other/FFBasePch.pch";
