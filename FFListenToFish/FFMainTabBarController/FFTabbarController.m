@@ -8,11 +8,37 @@
 
 #import "FFTabbarController.h"
 
+const NSString *test11111 = @"123";
+
+
+NSArray *array() {
+    return [NSArray array];
+}
+
+
+
 @interface FFTabbarController ()
 
 @end
 
 @implementation FFTabbarController
+
++ (instancetype)test {
+    FFTabbarController *t = [[self alloc] init];
+    return t;
+}
+
+
++ (void)ha {
+    [self test];
+    really();
+
+}
+
+static bool really() {
+    return YES;
+}
+
 
 - (instancetype)init {
     self = [super init];
@@ -25,12 +51,12 @@
 
 - (void)initializeUserInterface {
 //    FFCustomizeTabBar *tabbar = [[FFCustomizeTabBar alloc] init];
-    UITabBar *tabbar = [[UITabBar alloc] initWithFrame:CGRectMake(0, 200, 200, 200)];
+//    UITabBar *tabbar = [[UITabBar alloc] initWithFrame:CGRectMake(0, 200, 200, 200)];
 //    tabbar.customizeDelegate = self;
-    tabbar.backgroundColor = [UIColor clearColor];
-    tabbar.hidden = YES;
-
-    [self setValue:tabbar forKey:@"tabBar"];
+//    tabbar.backgroundColor = [UIColor clearColor];
+//    tabbar.hidden = YES;
+//
+//    [self setValue:tabbar forKey:@"tabBar"];
 
 //    [self.tabBar setValue:[UIColor clearColor] forKey:@"backgroundColor"];
 }
@@ -75,10 +101,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreen_width, 300)];
-    view.backgroundColor = [UIColor greenColor];
-    [self.view sendSubviewToBack:view];
-    [self.view addSubview:view];
+//    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreen_width, 300)];
+//    view.backgroundColor = [UIColor greenColor];
+//    [self.view sendSubviewToBack:view];
+//    [self.view addSubview:view];
 }
 
 - (void)didReceiveMemoryWarning {

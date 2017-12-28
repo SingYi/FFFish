@@ -449,7 +449,6 @@
 			children = (
 				B5A904161FE7927F0019C22E /* Controller */,
 				B5A904171FE7927F0019C22E /* Model */,
-				B5A904181FE7927F0019C22E /* View */,
 			);
 			path = MineClass;
 			sourceTree = "<group>";
@@ -468,13 +467,6 @@
 			children = (
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		B5A904181FE7927F0019C22E /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		B5A904191FE7927F0019C22E /* HomeClass */ = {
@@ -827,7 +819,7 @@
 				INFOPLIST_FILE = FFListenToFish/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Sing.player.interesting;
+				PRODUCT_BUNDLE_IDENTIFIER = Sing.player.interesting1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -848,7 +840,7 @@
 				INFOPLIST_FILE = FFListenToFish/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Sing.player.interesting;
+				PRODUCT_BUNDLE_IDENTIFIER = Sing.player.interesting1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
